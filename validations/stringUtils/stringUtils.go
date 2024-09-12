@@ -1,17 +1,9 @@
 package stringUtils
 
+import "strings"
+
 func IsBlank(val string) bool {
-	strLen := len(val)
-	if strLen == 0 {
-		return true
-	} else {
-		for i := 0; i < strLen; i++ {
-			if string(val[i]) == "" {
-				return false
-			}
-		}
-		return true
-	}
+	return strings.TrimSpace(val) == ""
 }
 
 func IsEmpty(val *string) bool {
